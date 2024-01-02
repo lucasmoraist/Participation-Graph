@@ -5,7 +5,7 @@ class UserController {
     static async findAll(req, res){
 
         try {
-            const users = await bd.Users.findAll();
+            const users = await bd.users.findAll();
             return res.status(200).json(users)
         }catch(error){
             return res.status(500).json(error.message);
@@ -15,7 +15,7 @@ class UserController {
 
     static async create(req, res){
         try{
-            const newUser = await bd.Users.create(req.body);
+            const newUser = await bd.users.create(req.body);
             return res.status(200).json(newUser);
         }catch(error){
             return res.status(500).json(error.message)
