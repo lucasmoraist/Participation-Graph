@@ -8,6 +8,7 @@ import { MainComponent } from './shared/main/main.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
 import { InputComponent } from './components/input/input.component';
 import { BtnPrimaryComponent } from './components/btn-primary/btn-primary.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BtnPrimaryComponent } from './components/btn-primary/btn-primary.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
