@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  items: any[] = []
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.getItems().subscribe(data => {
+      this.items = data;
+    })
   }
 
 }
