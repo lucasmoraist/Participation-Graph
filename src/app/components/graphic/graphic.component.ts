@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { UserService } from 'src/app/service/user.service';
 Chart.register(...registerables);
 
 @Component({
@@ -9,21 +10,23 @@ Chart.register(...registerables);
 })
 export class GraphicComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.RenderChart();
+    this.userService.getItems().subscribe(data => {
+      this.RenderChart(data);
+    })
   }
 
-  RenderChart() {
+  RenderChart(dataFromDatabase: any[]) {
     new Chart("dochart", {
       type: 'doughnut',
-      
+
       data: {
-        labels: ['Carlos Moura', 'Fernanda Oliveira', 'Hugo Silva', 'Eliza Souza', 'Anderson Santos'],
+        labels: dataFromDatabase.map(item => `${item.first_name} ${item.last_name}`),
         datasets: [{
           label: 'Participation',
-          data: [5, 15, 20, 20, 40],
+          data: dataFromDatabase.map(item => item.participation*100),
           backgroundColor: [
             'rgba(255, 99, 132, 1)',
             'rgba(54, 162, 235, 1)',
@@ -33,7 +36,7 @@ export class GraphicComponent implements OnInit {
           ],
           borderWidth: 0,
         }]
-      },
+      }
     });
   }
 
