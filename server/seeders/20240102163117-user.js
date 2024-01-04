@@ -5,36 +5,36 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('Users', [
       {
-        first_name: 'Carlos',
-        last_name: 'Moura',
-        participation: 0.05,
+        firstName: 'Carlos',
+        lastName: 'Moura',
+        participation: 50,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        first_name: 'Fernanda',
-        last_name: 'Oliveira',
-        participation: 0.15,
+        firstName: 'Fernanda',
+        lastName: 'Oliveira',
+        participation: 15,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        first_name: 'Hugo',
-        last_name: 'Silva',
-        participation: 0.2,
+        firstName: 'Hugo',
+        lastName: 'Silva',
+        participation: 20,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        first_name: 'Eliza',
-        last_name: 'Souza',
-        participation: 0.2,
+        firstName: 'Eliza',
+        lastName: 'Souza',
+        participation: 20,
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        first_name: 'Anderson',
-        last_name: 'Santos',
-        participation: 0.4,
+        firstName: 'Anderson',
+        lastName: 'Santos',
+        participation: 40,
         createdAt: new Date(),
         updatedAt: new Date()
       }
