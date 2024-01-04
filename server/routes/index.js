@@ -1,7 +1,7 @@
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
-const user = require("./UserRoute.js")
+const user = require("./userRoute.js")
 
 const corsOptions = {
     origin: '*',
