@@ -16,21 +16,21 @@
             <div>
                 <th>First Name</th>
                 <tr *ngFor="let item of items">
-                    {{ item.first_name }}
+                    {{ item.firstName }}
                 </tr>
             </div>
 
             <div>
                 <th>Last Name</th>
                 <tr *ngFor="let item of items">
-                    {{ item.last_name }}
+                    {{ item.lastName }}
                 </tr>
             </div>
 
             <div>
                 <th>Participation</th>
                 <tr *ngFor="let item of items">
-                    {{ item.participation*100 }}%
+                    {{ item.participation }}%
                 </tr>
             </div>
         </table>
