@@ -1,7 +1,7 @@
 <header>
-    <input-component type="text" text="First Name" id="firstName"></input-component>
-    <input-component type="text" text="Last Name" id="lastName"></input-component>
-    <input-component type="text" text="Your participation" id="participation"></input-component>
+    <input type="text" placeholder="First Name" [(ngModel)]="obj.firstName" name="firstName">
+    <input type="text" placeholder="Last Name" [(ngModel)]="obj.lastName" name="lastName">
+    <input type="number" placeholder="Participation" [(ngModel)]="obj.participation" name="participation">
 
-    <btn-primary text="SEND"></btn-primary>
+    <btn-primary text="SEND" (click)="handleSubmit()"></btn-primary>
 </header>
