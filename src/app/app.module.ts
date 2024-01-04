@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MainComponent } from './shared/main/main.component';
 import { GraphicComponent } from './components/graphic/graphic.component';
-import { InputComponent } from './components/input/input.component';
 import { BtnPrimaryComponent } from './components/btn-primary/btn-primary.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +16,13 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     MainComponent,
     GraphicComponent,
-    InputComponent,
     BtnPrimaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
