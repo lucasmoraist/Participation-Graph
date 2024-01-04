@@ -23,10 +23,10 @@ export class GraphicComponent implements OnInit {
       type: 'doughnut',
 
       data: {
-        labels: dataFromDatabase.map(item => `${item.first_name} ${item.last_name}`),
+        labels: dataFromDatabase.map(item => `${item.firstName} ${item.lastName}`),
         datasets: [{
           label: 'Participation',
-          data: dataFromDatabase.map(item => item.participation*100),
+          data: dataFromDatabase.map(item => item.participation),
           backgroundColor: [
             'rgba(255, 99, 132, 1)',
             'rgba(54, 162, 235, 1)',
