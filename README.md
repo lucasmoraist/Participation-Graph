@@ -40,4 +40,4 @@ O projeto de Gestão de Participantes é uma aplicação web que utiliza tecnolo
 
 # Autor
 &copy; Lucas de Morais Nascimento
-- <a href="http://portfolio-web-lucas.s3-website-us-east-1.amazonaws.com/" target="_blank">Portfólio</a>
+- <a href="http://lucasmoraist.github.io/Portfolio" target="_blank">Portfólio</a>
